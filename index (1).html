@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto & Forex Tracker</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>📈 Crypto & Forex Tracker</h1>
+
+    <div class="search-box">
+      <input type="text" id="coinInput" placeholder="Enter coin or forex pair...">
+      <button onclick="searchMarket()">Search</button>
+    </div>
+
+    <div class="card">
+      <h2 id="coinName">Bitcoin</h2>
+      <p>Price: <span id="price">Loading...</span></p>
+      <p>Market Cap: <span id="marketCap">Loading...</span></p>
+      <p>24h Change: <span id="change">Loading...</span></p>
+    </div>
+
+    <div class="chart-container">
+      <iframe
+        id="chartFrame"
+        src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_chart&symbol=BINANCE:BTCUSDT&interval=D&hidesidetoolbar=1&theme=dark"
+        width="100%"
+        height="500"
+        frameborder="0"
+      ></iframe>
+    </div>
+
+    <div class="history">
+      <h3>Recent Searches</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
